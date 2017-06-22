@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <form name="input" action="/monadtest" method="POST">
+                {% csrf-field %}
+                Message: <input type="text" name="msg" value="{{ msg }}">
+                <input type="submit" class="btn" value="Submit">
+            </form>
+        </div>
+    </div>
+	<div class="row">
+	    <div class="col-sm-12">
+	        <p><h1>{{ prettymsg }}</h1></p>
+	    </div>
+	</div>
+ {% endblock %}
